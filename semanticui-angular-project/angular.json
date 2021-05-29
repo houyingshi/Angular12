@@ -32,10 +32,10 @@
             ],
             "styles": [
               "src/styles.less",
-              // "../semantic-ui/semantic/dist/semantic.min.css"
+              "../semantic-ui/semantic/dist/semantic.min.css"
             ],
             "scripts": [
-              // "../semantic-ui/semantic/dist/semantic.min.js"
+              "../semantic-ui/semantic/dist/semantic.min.js"
             ]
           },
           "configurations": {
