@@ -17,4 +17,14 @@ export class Article{
     voteDown(): void{
         this.votes -= 1;
     }
+
+    domain(): string{
+        try{
+            const l :string = this.link.split('//')[1];
+            return l.split('/')[0];
+        } catch(err){
+            return '';
+        }
+
+    }
 }
