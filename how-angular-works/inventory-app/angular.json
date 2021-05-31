@@ -3,15 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "semanticui-angular-project": {
+    "inventory-app": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "less"
-        },
         "@schematics/angular:application": {
           "strict": true
-        } 
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -20,23 +17,22 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/semanticui-angular-project",
+            "outputPath": "dist/inventory-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "../semantic-ui/semantic/dist/semantic.min.css"
+              "src/styles.css"
+             
+
             ],
             "scripts": [
               
-              "../semantic-ui/semantic/dist/semantic.min.js"
             ]
           },
           "configurations": {
@@ -76,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "semanticui-angular-project:build:production"
+              "browserTarget": "inventory-app:build:production"
             },
             "development": {
-              "browserTarget": "semanticui-angular-project:build:development"
+              "browserTarget": "inventory-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "semanticui-angular-project:build"
+            "browserTarget": "inventory-app:build"
           }
         },
         "test": {
@@ -97,13 +93,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -111,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "semanticui-angular-project"
+  "defaultProject": "inventory-app"
 }
